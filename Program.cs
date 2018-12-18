@@ -6,7 +6,12 @@ namespace cstest
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            SayHi(Console.WriteLine);
+        }
+
+        public static void SayHi(Action<string> write)
+        {
+            write("Hello World!");
         }
     }
 }
